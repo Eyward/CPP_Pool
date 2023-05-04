@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/02 02:47:50 by zzirh             #+#    #+#             */
-/*   Updated: 2023/05/03 01:49:36 by zzirh            ###   ########.fr       */
+/*   Created: 2023/05/04 03:17:52 by zzirh             #+#    #+#             */
+/*   Updated: 2023/05/04 03:42:38 by zzirh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-#include <string>
-#include <iostream>
+#include "Harl.hpp"
 
-class Zombie
+int main(int ac, char **av)
 {
-	private:
-		std::string _name;
-	public:
-		Zombie();
-		~Zombie();
-		void randomChump(std::string name);
-		void announce();
-		Zombie* zombieHorde(int N, std::string name);
-
-};
-
-#endif
+    if (ac < 2 || !av[1][0])
+    {
+        std::cout << "No Arguments" << std::endl;
+        return (1);
+    }
+    
+    if (ac > 2 )
+    {
+        std::cout << "Too Many Arguments " << std::endl;
+        return (1);   
+    } 
+    Harl harl;
+    harl.complain(av[1]);
+    return (0);
+}
