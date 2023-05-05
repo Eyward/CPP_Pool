@@ -6,7 +6,7 @@
 /*   By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 02:55:36 by zzirh             #+#    #+#             */
-/*   Updated: 2023/05/03 03:47:04 by zzirh            ###   ########.fr       */
+/*   Updated: 2023/05/05 02:19:30 by zzirh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class HumanB
 {
     private:
-        std::string const _name;
+        std::string _name;
         Weapon*     _weapon;      
     public:
         HumanB(std::string name);

@@ -6,7 +6,7 @@
 /*   By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 02:55:25 by zzirh             #+#    #+#             */
-/*   Updated: 2023/05/03 04:14:45 by zzirh            ###   ########.fr       */
+/*   Updated: 2023/05/05 02:16:49 by zzirh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 HumanA::HumanA(std::string name, Weapon &weapon) : _weapon(weapon), _name(name)
 {
-    //_weapon = weapon;
-    //_name = name;
     std::cout << "HumanA constructor" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 02:47:50 by zzirh             #+#    #+#             */
-/*   Updated: 2023/05/03 01:49:36 by zzirh            ###   ########.fr       */
+/*   Updated: 2023/05/05 01:34:35 by zzirh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Zombie
 	public:
 		Zombie();
 		~Zombie();
-		void randomChump(std::string name);
 		void announce();
 		Zombie* zombieHorde(int N, std::string name);
 

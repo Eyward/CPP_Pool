@@ -6,7 +6,7 @@
 /*   By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 02:55:32 by zzirh             #+#    #+#             */
-/*   Updated: 2023/05/03 04:14:54 by zzirh            ###   ########.fr       */
+/*   Updated: 2023/05/05 02:19:24 by zzirh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 HumanB::HumanB(std::string name) : _name(name)
 {
-    //_name = name;
     std::cout << "HumanB constructor" << std::endl;
 }
 

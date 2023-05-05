@@ -6,7 +6,7 @@
 /*   By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 04:21:45 by zzirh             #+#    #+#             */
-/*   Updated: 2023/05/04 01:59:32 by zzirh            ###   ########.fr       */
+/*   Updated: 2023/05/05 02:58:45 by zzirh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,13 @@ int main(int ac, char **av)
         std::cout << "Failed to open file" << std::endl;
         return (1);
     }
+    
+    if (forigin.peek() == std::ifstream::traits_type::eof())
+    {
+        std::cout << "file is empty " << std::endl;
+        return (1);
+    }
+    
     fnew.open(av[1] + std::string(".replace"), std::ios::out);
     if (!fnew)
     {
