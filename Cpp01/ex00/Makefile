@@ -6,7 +6,7 @@
 #    By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/02 02:18:45 by zzirh             #+#    #+#              #
-#    Updated: 2023/05/02 23:31:22 by zzirh            ###   ########.fr        #
+#    Updated: 2023/05/05 15:23:46 by zzirh            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,10 @@ HEADERS = Zombie.hpp\
 
 RM = rm -fr
 
-%.o:%.c
-	%{CC} ${FLAGS} -c $< -o $@
+%.o:%.cpp ${HEADERS}
+	${CC} ${FLAGS} -c $< -o $@
 
-${NAME}:	${OBJ} ${HEADERS}
+${NAME}:	${OBJ} 
 	${CC} ${FLAGS} -o ${NAME} ${OBJ}
 
 all: ${NAME}

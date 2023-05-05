@@ -6,7 +6,7 @@
 #    By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 02:55:43 by zzirh             #+#    #+#              #
-#    Updated: 2023/05/03 03:36:16 by zzirh            ###   ########.fr        #
+#    Updated: 2023/05/05 15:24:27 by zzirh            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,11 @@ HEADERS = HumanA.hpp HumanB.hpp Weapon.hpp
 
 RM = rm -fr
 
-%.o:%.c
-	%{CC} ${FLAGS} -c $< -o $@
+%.o:%.cpp ${HEADERS}
+	${CC} ${FLAGS} -c $< -o $@
 
-${NAME}:	${OBJ} ${HEADERS}
+
+${NAME}:	${OBJ}
 	${CC} ${FLAGS} -o ${NAME} ${OBJ}
 
 all: ${NAME}

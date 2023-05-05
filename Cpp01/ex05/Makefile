@@ -6,7 +6,7 @@
 #    By: zzirh <zzirh@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/04 03:17:55 by zzirh             #+#    #+#              #
-#    Updated: 2023/05/04 03:44:34 by zzirh            ###   ########.fr        #
+#    Updated: 2023/05/05 15:23:34 by zzirh            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,10 @@ HEADERS = Harl.hpp
 
 RM = rm -fr
 
-%.o:%.c
-	%{CC} ${FLAGS} -c $< -o $@
+%.o:%.cpp ${HEADERS}
+	${CC} ${FLAGS} -c $< -o $@
 
-${NAME}:	${OBJ} ${HEADERS}
+${NAME}:	${OBJ} 
 	${CC} ${FLAGS} -o ${NAME} ${OBJ}
 
 all: ${NAME}
