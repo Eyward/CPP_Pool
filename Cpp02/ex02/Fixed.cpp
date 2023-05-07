@@ -67,6 +67,115 @@ bool Fixed::operator>(Fixed const& fp) const
     return (0);
 }
 
+bool Fixed::operator<(Fixed const& fp) const
+{
+    if (this->_fixed_point < fp.getRawBits())
+        return (1);
+    return (0);
+}
+
+bool Fixed::operator>=(Fixed const& fp) const
+{
+    if (this->_fixed_point >= fp.getRawBits())
+        return (1);
+    return (false);
+}
+
+bool Fixed::operator<=(Fixed const& fp) const
+{
+    if (this->_fixed_point <= fp.getRawBits())
+        return (1);
+    return (0);
+}
+
+bool Fixed::operator==(Fixed const& fp) const
+{
+    if (this->_fixed_point == fp.getRawBits())
+        return (1);
+    return (0);
+}
+
+bool Fixed::operator!=(Fixed const& fp) const
+{
+    if (this->_fixed_point != fp.getRawBits())
+        return (1);
+    return (0);
+}
+
+Fixed Fixed::operator+(Fixed const& fp) const
+{
+    return (this->toFloat() + fp.toFloat());
+}
+
+Fixed Fixed::operator-(Fixed const& fp) const
+{
+    return (this->toFloat() - fp.toFloat());
+}
+
+Fixed Fixed::operator*(Fixed const& fp) const
+{
+    return (this->toFloat() * fp.toFloat());
+}
+
+Fixed Fixed::operator/(Fixed const& fp) const
+{
+    return (this->toFloat() / fp.toFloat());
+}
+
+Fixed& Fixed::operator++()
+{
+    this->_fixed_point += 1;
+    return (*this); 
+}
+
+Fixed Fixed::operator++(int)
+{
+    Fixed temp(*this);
+    this->_fixed_point += 1;
+    return (temp);
+}
+
+Fixed& Fixed::operator--()
+{
+    this->_fixed_point -= 1;
+    return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed temp(*this);
+    this->_fixed_point -= 1;
+    return (temp);
+}
+
+Fixed const& Fixed::min(Fixed const& fp1, Fixed const& fp2)
+{
+    if (fp1.getRawBits() < fp2.getRawBits())
+        return (fp1);
+    return (fp2);
+}
+
+Fixed const& Fixed::max(Fixed const& fp1, Fixed const& fp2)
+{
+    if (fp1.getRawBits() > fp2.getRawBits())
+        return (fp1);
+    return (fp2);
+}
+
+Fixed& Fixed::min(Fixed& fp1, Fixed& fp2)
+{
+    if (fp1.getRawBits() < fp2.getRawBits())
+        return (fp1);
+    return (fp2);
+}
+
+Fixed& Fixed::max(Fixed& fp1, Fixed& fp2)
+{
+    if (fp1.getRawBits() > fp2.getRawBits())
+        return (fp1);
+    return (fp2);
+}
+
 
 std::ostream& operator<<(std::ostream& os, Fixed const& fix)
 {
