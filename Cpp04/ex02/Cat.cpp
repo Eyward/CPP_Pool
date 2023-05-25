@@ -19,6 +19,7 @@ Cat::~Cat()
 {
     std::cout << "Cat Destrcutor called " << std::endl;
     delete brain;
+
 }
 
 Cat& Cat::operator=(Cat const& obj)

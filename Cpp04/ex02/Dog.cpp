@@ -22,7 +22,7 @@ Dog::~Dog()
 
 Dog& Dog::operator=(Dog const& obj)
 {
-    if (this != &obj)
+     if (this != &obj)
     {
         this->_type = obj._type;
         if (brain != NULL)
