@@ -11,16 +11,18 @@
 
 int main()
 {
-    const int N = 10; 
+    const int N = 4; 
     const Animal* j = new Dog();
     const Animal* i = new Cat();
         
     delete j;
     delete i;
     std::cout << std::endl;
+    std::cout << std::endl;
+
     Animal *arr[N];
     
-    for(int i = 0; i < N; ++i){
+    for(int i = 0; i < N; i++){
         if (i < N/2)
             arr[i] = new Dog;
         else

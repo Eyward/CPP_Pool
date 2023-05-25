@@ -11,7 +11,7 @@
 
 int main()
 {
-    const int N = 10; 
+    const int N = 4; 
     const Animal* j = new Dog();
     const Animal* i = new Cat();
         
@@ -29,5 +29,6 @@ int main()
     std::cout << std::endl;
     for (int i = 0; i < N; ++i)
         delete arr[i];
+    system("leaks program");
     return 0;
 }

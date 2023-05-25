@@ -2,7 +2,7 @@
 
 WrongAnimal::WrongAnimal()
 {
-    std::cout << "WrongAnimal Constructor called" << std::endl;
+    std::cout << "WrongAnimal Default Constructor called" << std::endl;
     this->_type = "WrongAnimal";
 }
 
@@ -10,6 +10,12 @@ WrongAnimal::WrongAnimal(WrongAnimal const& old_obj)
 {
     std::cout << "WrongAnimal Copy constructor called " << std::endl;
     this->_type = old_obj._type;
+}
+
+WrongAnimal::WrongAnimal(std::string type)
+{
+    std::cout << "WrongAnimal Constructor called" << std::endl;
+    this->_type = type;
 }
 
 WrongAnimal::~WrongAnimal()

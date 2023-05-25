@@ -8,11 +8,11 @@ class Dog : public Animal
     public:
         Dog();
         Dog(Dog const& old_obj);
-        virtual ~Dog();
+        ~Dog();
         Dog& operator=(Dog const& obj);
 
-        virtual void makeSound() const;
-     private:
+        void makeSound() const;
+    private:
         Brain* brain; 
 };
 

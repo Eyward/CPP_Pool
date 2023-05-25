@@ -9,10 +9,10 @@ class Cat : public Animal
     public:
         Cat();
         Cat(Cat const& old_obj);
-        virtual ~Cat();
+        ~Cat();
         Cat& operator=(Cat const& obj);
 
-        virtual void makeSound() const;
+        void makeSound() const;
     private:
         Brain *brain;
 };
