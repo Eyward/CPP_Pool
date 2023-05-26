@@ -12,7 +12,7 @@ Cat::Cat(Cat const& old_obj) : Animal(old_obj)
 {
     std::cout << "Cat Copy constructor called " << std::endl;
     brain = NULL;
-    this->_type = old_obj._type;
+    *this = old_obj;
 }
 
 Cat::~Cat()

@@ -9,7 +9,7 @@ WrongAnimal::WrongAnimal()
 WrongAnimal::WrongAnimal(WrongAnimal const& old_obj)
 {
     std::cout << "WrongAnimal Copy constructor called " << std::endl;
-    this->_type = old_obj._type;
+    *this = old_obj;
 }
 
 WrongAnimal::WrongAnimal(std::string type)

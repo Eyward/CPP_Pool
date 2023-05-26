@@ -29,6 +29,6 @@ int main()
     std::cout << std::endl;
     for (int i = 0; i < N; ++i)
         delete arr[i];
-    system("leaks program");
+   // system("leaks program");
     return 0;
 }
